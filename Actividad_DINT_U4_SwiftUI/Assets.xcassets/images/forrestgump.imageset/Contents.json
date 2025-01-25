@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "forrestgump.jpg",
+      "filename" : "forrestgump 1.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,12 +12,6 @@
     {
       "idiom" : "universal",
       "scale" : "3x"
-    },
-    {
-      "filename" : "forrestgump.png",
-      "idiom" : "universal",
-      "scale" : "1x",
-      "unassigned" : true
     }
   ],
   "info" : {
