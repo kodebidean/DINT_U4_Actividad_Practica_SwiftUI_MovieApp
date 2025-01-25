@@ -2,7 +2,7 @@
 //  Actividad_DINT_U4_SwiftUIApp.swift
 //  Actividad_DINT_U4_SwiftUI
 //
-//  Created by user258285 on 1/25/25.
+//  Created by Imanol Mugueta Unsain on 25/01/25.
 //
 
 import SwiftUI

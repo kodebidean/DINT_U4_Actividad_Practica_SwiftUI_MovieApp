@@ -2,7 +2,9 @@
 //  FilmData.swift
 //  Actividad_DINT_U4_SwiftUI
 //
-//  Created by Imanol Mugueta Unsain on 1/25/25.
+//  Created by José Antonio Lara Sánchez on 14/10/24.
+//
+//  Edited by Imanol Mugueta Unsain on 25/01/25.
 //
 
 import Foundation

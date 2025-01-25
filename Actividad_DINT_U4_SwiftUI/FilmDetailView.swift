@@ -2,7 +2,7 @@
 //  FilmDetailView.swift
 //  Actividad_DINT_U4_SwiftUI
 //
-//  Created by Imanol Mugueta Unsain on 1/25/25.
+//  Created by Imanol Mugueta Unsain on 25/01/25.
 //
 
 import SwiftUI
@@ -13,38 +13,105 @@ struct FilmDetailView: View {
     
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 20) {
+            VStack(alignment: .center, spacing: 16) {
+                // Portada
                 Image(film.cartel)
                     .resizable()
                     .scaledToFit()
-                    .cornerRadius(10)
-                    .shadow(radius: 5)
+                    .frame(height: 400)
+                    .clipped()
+                    .border(Color.gold)
+                    .cornerRadius(20)
                 
-                Text(film.titulo)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color("redCarpet"))
-                    .multilineTextAlignment(.center)
-                
-                Text("Sinopsis:")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .foregroundColor(Color("gold"))
-                
-                Text(film.descripcion)
-                    .foregroundColor(Color("gold"))
-                    .lineLimit(nil)
+                // Título
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(film.titulo)
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(.white)
                     
+                    // Año y estrellas
+                    HStack {
+                        Text("\(film.anho)")
+                            .font(.subheadline)
+                            .foregroundColor(Color("Gray"))
+                            .bold()
+                        
+                        Spacer()
+                        
+                        HStack {
+                            ForEach(0..<film.estrellas, id: \.self) { _ in
+                                Image(systemName: "star.fill")
+                                    .foregroundColor(.yellow)
+                            }
+                            ForEach(film.estrellas..<5, id: \.self) { _ in
+                                Image(systemName: "star")
+                                    .foregroundColor(.gray)
+                            }
+                        }
+                    }
+                }
+                VStack(alignment: .leading, spacing: 6){
+                    // Descripción
+                    Text("Descripción")
+                        .padding(.top)
+                        .font(.headline)
+                        .foregroundColor(Color("gold"))
+                    Text(film.descripcion)
+                        .font(.body)
+                        .multilineTextAlignment(.leading)
+                        .foregroundColor(.white)
+                }
+                // Duración y Nacionalidad
+                HStack {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Duración")
+                            .padding(.top)
+                            .font(.caption)
+                            .bold()
+                            .foregroundColor(Color("gold"))
+                        Text("\(film.duracion) min")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                    }
+                        
+                    
+                    .frame(maxWidth: .infinity)
+                    
+                    VStack(alignment: .leading, spacing: 2)  {
+                        Text("Nacionalidad")
+                            .padding(.top)
+                            .font(.caption)
+                            .bold()
+                            .foregroundColor(Color("gold"))
+                        Text(film.nacionalidad)
+                            
+                            .foregroundColor(.white)
+                            .font(.headline)
+                    }
+                    .frame(maxWidth: .infinity)
+                }
+                .padding(.vertical, 10)
+                
+                Spacer()
             }
-            .padding(32)
+            .padding(.horizontal)
+            
         }
-        .navigationTitle("Detalle")
-        .navigationBarTitleDisplayMode(.inline)
+        .background(Color("redCarpet").edgesIgnoringSafeArea(.all))
     }
 }
 
 struct FilmDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        FilmDetailView(film: Film(titulo: "Cadena perpetua", descripcion: "Dos hombres encarcelados establecen una fuerte amistad a lo largo de los años, encontrando consuelo y redención eventual a través de actos de decencia común.", cartel: "cadena_perpetua", duracion:"142", anho: "1994", nacionalidad: "Estados Unidos",estrellas: 5))
+        FilmDetailView(film: Film(
+            titulo: "La lista de Schindler",
+            descripcion: "En la Polonia ocupada por los alemanes durante la Segunda Guerra Mundial, Oskar Schindler se preocupa gradualmente por su fuerza laboral judía después de presenciar su persecución por parte de los nazis.",
+            cartel: "la_lista_de_schindler",
+            duracion: "195",
+            anho: "1993",
+            nacionalidad: "Estados Unidos",
+            estrellas: 5
+        ))
     }
 }

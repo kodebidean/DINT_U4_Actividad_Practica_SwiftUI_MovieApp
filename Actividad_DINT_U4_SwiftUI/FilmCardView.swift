@@ -2,7 +2,7 @@
 //  FilmCardView.swift
 //  Actividad_DINT_U4_SwiftUI
 //
-//  Created by Imanol Mugueta Unsain on 1/25/25.
+//  Created by Imanol Mugueta Unsain on 25/01/25.
 //
 
 import SwiftUI
@@ -21,12 +21,14 @@ struct FilmCardView: View {
             
             Text(film.titulo)
                 .font(.headline)
-                .foregroundColor(Color("gold"))
+                .foregroundColor(.white)
                 .lineLimit(2)
                 .multilineTextAlignment(.center)
-                .padding(.top, 5)
+                .frame(height: 60)
+                .padding(.top, 2)
+                .padding(.bottom,5)
         }
-        .frame(width:150) // Ancho total tarjeta
+        .frame(width:150) // Ancho total
     }
 }
 

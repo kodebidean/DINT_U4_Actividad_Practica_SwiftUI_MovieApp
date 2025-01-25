@@ -1,0 +1,10 @@
+# Xcode
+*.xcuserdata
+*.xccheckout
+*.xcscmblueprint
+*.xcodeproj/project.xcworkspace/xcuserdata
+DerivedData/
+.DS_Store
+*.swp
+*.lock
+build/
