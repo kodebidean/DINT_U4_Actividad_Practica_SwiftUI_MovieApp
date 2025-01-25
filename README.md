@@ -1,6 +1,7 @@
-# FilmView 🎥
+# MovieApp 🎥
 
-**FilmView** es una aplicación desarrollada en **SwiftUI** que permite 
+**MovieApp** es una aplicación desarrollada en **SwiftUI**, como actividad de 
+la unidad 4 de Desarrollo de Interfaces del ciclo de DAM, permite 
 explorar y visualizar detalles de películas. Esta app utiliza un diseño 
 responsivo y moderno, y está basada en el concepto de gestión eficiente de 
 datos mediante `@StateObject`.
@@ -20,7 +21,6 @@ datos mediante `@StateObject`.
 - **SwiftUI**: Framework de desarrollo declarativo para construir la 
 interfaz de usuario.
 - **@StateObject**: Gestión de estado reactiva para datos dinámicos.
-- **Assets personalizados**: Íconos y fondos adaptados al tema 
-cinematográfico.
+- **Navegación entre vistas**
 
 ## Prueba de funcionamiento de la App
